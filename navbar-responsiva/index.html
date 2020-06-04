@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navbar.css">
+    <title>Navbar Responsiva</title>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li class="logo"><a href="#">LOGO</a></li>
+            <li class="item"><a href="#">Home</a></li>
+            <li class="item"><a href="#">Sobre</a></li>
+            <li class="item"><a href="#">Serviços</a></li>
+            <li class="item button"><a href="#">Login</a></li>
+            <li class="item button secondary"><a href="#">Sign Up</a></li>
+            <li class="toggle" id="toggle"><span class="bars"></span></li>
+        </ul>
+    </nav>
+    <main>
+        <a href="#" style="position: fixed; bottom: 0; ">Link Teste</a>
+    </main>
+</body>
+</html>
+
+<script>
+
+    const toggleButton = document.getElementById('toggle');
+    const menuItems = document.getElementsByClassName('item');
+
+    toggleButton.addEventListener('click', () => {
+        for (let i = 0; i < menuItems.length; i++) {
+            menuItems[i].classList.toggle('active')
+        }
+    })
+    
+</script>
